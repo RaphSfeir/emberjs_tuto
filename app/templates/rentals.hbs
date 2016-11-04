@@ -1,0 +1,23 @@
+<div class="jumbo">
+	<div class="right tomster"></div>
+	<h2>Welcome!</h2>
+	<p>Rentals dude</p>
+	{{#link-to 'about' class="button"}}
+		About us dude
+	{{/link-to}}
+</div>
+
+{{#each model as |rental|}}
+	<article class="listing">
+		<h3>{{rental.title}}</h3>
+		<div class="detial owner">
+			<span>Owner: </span> {{rental.owner}}
+		</div>
+		<div class="detail type">
+			<span>Type:</span> {{rental.type}}
+		</div>
+		<div class="detail location">
+			<span>Location:</span> {{rental.city}}
+		</div>
+	</article>
+{{/each}}
